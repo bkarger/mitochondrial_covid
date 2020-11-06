@@ -1,0 +1,12 @@
+Sample:	Singlets/PE_pos | Freq. of Parent
+MitoSoX 72 hr  Vero  9_11_2020_Vero_MOI 1,3a,1_001_005.fcs	6.44
+MitoSoX 72 hr  Vero  9_11_2020_Vero_MOI 1,3a,1_002_006.fcs	9.66
+MitoSoX 72 hr  Vero  9_11_2020_Vero_MOI 1,3a,1_004.fcs	9.86
+MitoSoX 72 hr  Vero  9_11_2020_Vero_MOI 1,3a,5_001_008.fcs	4.99
+MitoSoX 72 hr  Vero  9_11_2020_Vero_MOI 1,3a,5_002_009.fcs	9.38
+MitoSoX 72 hr  Vero  9_11_2020_Vero_MOI 1,3a,5_007.fcs	6.65
+MitoSoX 72 hr  Vero  9_11_2020_Vero_UNSTAINED_001.fcs	5.44E-3
+MitoSoX 72 hr  Vero  9_11_2020_Vero_uninfected_001_003.fcs	7.38
+MitoSoX 72 hr  Vero  9_11_2020_Vero_uninfected_002.fcs	7.18
+Mean	6.84
+SD	3.05

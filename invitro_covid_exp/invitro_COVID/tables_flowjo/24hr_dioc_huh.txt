@@ -1,0 +1,12 @@
+Sample:	Singlets/FITC_pos | Freq. of Parent
+DIOC 24 hr Vero and HuH7 +,2f,- Covid_001_HuH7_UNSTAINED_030.fcs	2.09
+DIOC 24 hr Vero and HuH7 +,2f,- Covid_001_HuH7_uninfected_001_032.fcs	43.5
+DIOC 24 hr Vero and HuH7 +,2f,- Covid_001_HuH7_uninfected_031.fcs	42.3
+DIOC 24 hr Vero and HuH7 +,2f,- Covid_001_HuH7_1,2f,1 MOI_001_037.fcs	42.5
+DIOC 24 hr Vero and HuH7 +,2f,- Covid_001_HuH7_1,2f,1 MOI_002_038.fcs	47.5
+DIOC 24 hr Vero and HuH7 +,2f,- Covid_001_HuH7_1,2f,1 MOI_036.fcs	34.6
+DIOC 24 hr Vero and HuH7 +,2f,- Covid_001_HuH7_1,2f,2 MOI 001_034.fcs	41.4
+DIOC 24 hr Vero and HuH7 +,2f,- Covid_001_HuH7_1,2f,2 MOI_002_035.fcs	44.9
+DIOC 24 hr Vero and HuH7 +,2f,- Covid_001_HuH7_1,2f,2 MOI_033.fcs	37.6
+Mean	37.4
+SD	13.8

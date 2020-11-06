@@ -1,0 +1,9 @@
+Sample:	Singlets/FITC-A+ | Freq. of Parent
+DIOC 48 hr Vero and HuH7 Covid_9-10-2020_Huh-7_UNSTAINED_010.fcs	19.6
+DIOC 48 hr Vero and HuH7 Covid_9-10-2020_Huh-7_uninfected_001_012.fcs	97.4
+DIOC 48 hr Vero and HuH7 Covid_9-10-2020_Huh-7_uninfected_011.fcs	96.4
+DIOC 48 hr Vero and HuH7 Covid_9-10-2020_Huh-7_1,3a,1 MOI_001_014.fcs	97.2
+DIOC 48 hr Vero and HuH7 Covid_9-10-2020_Huh-7_1,3a,1 MOI_002_015.fcs	98.3
+DIOC 48 hr Vero and HuH7 Covid_9-10-2020_Huh-7_1,3a,1 MOI_013.fcs	97.5
+Mean	84.4
+SD	31.8

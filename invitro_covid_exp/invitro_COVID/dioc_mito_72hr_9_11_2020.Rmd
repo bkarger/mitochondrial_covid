@@ -1,0 +1,87 @@
+---
+title: "DiOC6 & MitoSox Staining 72 hr"
+author: "Burton"
+date: "10/21/2020"
+output: pdf_document
+---
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+```{r}
+library(tidyverse)
+library(stats)
+library(broom)
+library(kableExtra)
+```
+
+```{r}
+fitc <- read_tsv("tables_flowjo/72hr_dioc.txt")
+pe <- read_tsv("tables_flowjo/72hr_mito.txt")
+```
+
+```{r}
+fitcCleaned <- fitc %>% 
+  slice(-(10:11)) %>% 
+  mutate(`Sample:` = str_replace(`Sample:`, 
+                                 "DIOC 72 hr Vero Covid_9-11-2021_", 
+                                 ""),
+         `Sample:` = str_replace(`Sample:`, "_1,3a,", " "),
+         `Sample:` = str_replace(`Sample:`, ".fcs", ""),
+         `Sample:` = str_replace(`Sample:`, "_[0-9][0-9][0-9]", ""),
+         `Sample:` = str_replace(`Sample:`, "_[0-9][0-9][0-9]", "")) %>% 
+  rename(Sample = `Sample:`,
+         FITC_pos_of_singlets = `Singlets/FITC-A+ | Freq. of Parent`)
+
+peCleaned <- pe %>% 
+  slice(-(10:11)) %>% 
+  mutate(`Sample:` = str_replace(`Sample:`, 
+                                 "MitoSoX 72 hr  Vero  9_11_2020_",
+                                 ""),
+         `Sample:` = str_replace(`Sample:`, "1,3a,", " "),
+         `Sample:` = str_replace(`Sample:`, ".fcs", ""),
+         `Sample:` = str_replace(`Sample:`, "_[0-9][0-9][0-9]", ""),
+         `Sample:` = str_replace(`Sample:`, "_[0-9][0-9][0-9]", "")) %>% 
+  rename(Sample = `Sample:`,
+         PE_pos_of_singlets = `Singlets/PE_pos | Freq. of Parent`)
+```
+
+```{r}
+fitcCleanedGraph <- fitcCleaned %>% 
+  ggplot(aes(y = FITC_pos_of_singlets, x = Sample)) +
+  geom_point(color = 'red') +
+  theme(axis.text.x=element_text(angle=45, hjust=1))
+
+peCleanedGraph <- peCleaned %>% 
+  ggplot(aes(y = PE_pos_of_singlets, x = Sample)) +
+  geom_point(color = 'blue') +
+  theme(axis.text.x=element_text(angle=45, hjust=1))
+
+gridExtra::grid.arrange(fitcCleanedGraph, peCleanedGraph)  
+```
+
+Statistics ANOVA-TukeyHSD
+```{r}
+fitcCleaned %>% 
+  slice(-1) %>% 
+  nest() %>%
+  mutate(aov_result = map(data, ~aov(FITC_pos_of_singlets ~ Sample, data = .x)),
+            tukey_result = map(aov_result, TukeyHSD),
+            tidy_tukey = map(tukey_result, tidy)) %>%
+     unnest(tidy_tukey, .drop = TRUE) %>% 
+  select(-(1:3)) %>% 
+  kable(caption="DiOC Vero")
+
+peCleaned %>% 
+  slice(-7) %>% 
+  nest() %>%
+  mutate(aov_result = map(data, ~aov(PE_pos_of_singlets ~ Sample, data = .x)),
+            tukey_result = map(aov_result, TukeyHSD),
+            tidy_tukey = map(tukey_result, tidy)) %>%
+     unnest(tidy_tukey, .drop = TRUE) %>% 
+  select(-(1:3)) %>% 
+  kable(caption="Mito Vero")
+```
+
+
+

@@ -1,0 +1,12 @@
+Sample:	Singlets/PE_pos | Freq. of Parent
+MitoSoX 24 hr Vero and HuH7 +,2f,- Covid_HuH7_UNSTAINED_011.fcs	0.12
+MitoSoX 24 hr Vero and HuH7 +,2f,- Covid_HuH7_uninfected_001_013.fcs	6.04
+MitoSoX 24 hr Vero and HuH7 +,2f,- Covid_HuH7_uninfected_012.fcs	4.85
+MitoSoX 24 hr Vero and HuH7 +,2f,- Covid_HuH7_1,2f,1 MOI_001_018.fcs	7.78
+MitoSoX 24 hr Vero and HuH7 +,2f,- Covid_HuH7_1,2f,1 MOI_002_019.fcs	6.04
+MitoSoX 24 hr Vero and HuH7 +,2f,- Covid_HuH7_1,2f,1 MOI_017.fcs	5.67
+MitoSoX 24 hr Vero and HuH7 +,2f,- Covid_HuH7_1,2f,2 MOI_001_015.fcs	4.92
+MitoSoX 24 hr Vero and HuH7 +,2f,- Covid_HuH7_1,2f,2 MOI_002_016.fcs	4.93
+MitoSoX 24 hr Vero and HuH7 +,2f,- Covid_HuH7_1,2f,2 MOI_014.fcs	4.77
+Mean	5.01
+SD	2.07
